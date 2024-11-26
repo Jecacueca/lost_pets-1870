@@ -1,0 +1,11 @@
+<%= form_with model: pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :species %>
+  <%= f.select :species, collection: Pet::SPECIES %>
+  <%= f.label :date_lost %>
+  <%= f.date_field :date_lost %>
+  <%= f.submit %>
+<% end %>
